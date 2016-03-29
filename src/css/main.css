@@ -1,0 +1,94 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
+
+.dark-background {
+    background-color: #333;
+}
+
+.white-background {
+    background-color: white;
+}
+
+.height-vh {
+    min-height: 100vh;
+    min-height: calc(100vh - 60px);
+}
+
+.panel-medium {
+    max-width: 500px;
+}
+
+.center-content {
+    width:value;
+    margin:auto;
+}
+
+.max-width-100 {
+    max-width: 100px; 
+}
+.max-width-150 {
+    max-width: 150px;
+}
+.max-width-200 {
+    max-width: 200px;
+}
+.max-width-300 {
+    max-width: 300px;
+}
+.max-width-500 {
+    max-width: 690px;
+}
+.heiht-30 {
+    height: 30px;
+}
+
+.div-inline {
+    display:inline-block !important; 
+}
+
+
+
+
+
+.timer-span {
+    font-family: font-family: 'Source Sans Pro', sans-serif;
+    font-size: 32px;
+}
+
+.large-text {
+    font-size: 48px;   
+}
+
+.h1-font { 
+    font-family: 'Oswald', sans-serif; 
+    font-size: 48px;
+}
+
+.bodred1 {
+    border: 2px solid black;
+}
+
+
+.link {    
+    color: gray;
+    font-size: 14px;
+}
+.link:hover {
+    text-decoration: none;
+    color: lightgray;
+}
+
+
+#soundButton {
+    height: 34px;
+    position: absolute;
+    bottom: 0px;
+    margin-left: 5px;
+}
+
+#btnStart {
+    width: 120px;
+    position: relative;
+    left: 80px;
+}

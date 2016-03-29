@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Poker Tournament</title>
+        <link rel="icon" href="https://openclipart.org/download/197691/mono-kpoker.svg" type="image/svg" sizes="16x16">
+        
+        <!-- CSS fonts -->
+        <link rel="stylesheet" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+        
+    </head>
+    <body class="dark-background">
+        <div class="heiht-30 hidden-sm hidden-xs">&nbsp;
+        </div>
+        <div class="container white-background height-vh">
+            
+            <div class="text-center">  
+                <h1 class="h1-font">Poker Tournament</h1>
+                
+                <img src="https://openclipart.org/download/197691/mono-kpoker.svg" height="100px" width="auto" ald="logo">
+                <br><br><br><br><br>
+            </div>
+                
+             <!-- Panel setup -->
+            <div class="panel panel-primary panel-medium center-content" id="setupForm">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Set up tournament <i class="fa fa-trophy faa-tada"></i></h3>
+                </div>
+                <div class="panel-body">
+                        
+                        <form role="form">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label for="text">Starting chips:</label>
+                                        <select class="form-control max-width-150" id="chipsMenu">
+                                            <option value="1">1 500</option>
+                                            <option value="10">15 000</option>
+                                            <option value="100">150 000</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">                                        
+                                        <label for="soundMenu">Sound Effect:</label>
+                                        <div id="">
+                                            <select class="form-control max-width-150  div-inline" id="soundMenu">
+                                                <option value="resources/sound.mp3">Air horn</option>
+                                                <option value="none">Sound off</option>
+                                            </select>
+                                            <button type="button" style="display: blick;" class="btn btn-default" id="soundButton" onclick="playSound();"><i class="fa fa-play"></i></button>
+                                        </div>                                  
+                                    </div>
+                                    <div class="col-md-2"></div>
+                                </div>                                                       
+                            </div>
+                            <div class="form-group">
+                                <label for="text">Blind level interval in minutes:</label>
+                                <input type="text" class="form-control" id="interval" value="15">
+                            </div>
+                            <div id="error_message" style="color:red;"></div>
+                            <button type="button" class="btn btn-success" onclick="btnSetupClick();">Set up</button>
+                        </form>
+                </div>
+            </div> <!-- End setup container -->  
+            
+            <!-- Panel tournament  -->
+            <div id="tournamentContainer">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="text-center">
+                            <button type="button" class="btn btn-success btn-lg" id="btnStart" onclick="btnClickstartTimer();">Start</button>
+                            <a href="index.html"><button type="button" class="btn btn-default btn-lg pull-right">Back</button></a>
+                            <button type="button" class="btn btn-default btn-lg pull-right" id="btnReset" onclick="btnClicksReset();">Reset</button>
+                            <br><br><br>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="panel panel-default max-width-300" >
+                                <div class="panel-body"><span class="timer-span" id="timerSpan"></span></div>
+                            </div>
+                            </div>
+                             <div class="col-md-6">
+                                 <div class="panel panel-default max-width-300">
+                                     <div class="panel-body"><span class="timer-span" id="levelSpan"></span></div>
+                                 </div>
+                             </div>
+                        </div>   
+                        <div class="panel panel-default max-width-500">
+                            <div class="panel-body">
+                                <span class="timer-span" id="blindSpan"></span>
+                                <span class="timer-span" id="anteSpan"></span>
+                            </div>
+                         </div>      
+                        </div>
+                    </div> <!-- End right col --> 
+                    <div class="col-md-4">        
+                        <div class="panel panel-primary panel-medium center-content max-width-300" id="setupForm">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Tournament blind schedule</h3>
+                            </div>
+                            <div class="panel-body">
+                                <span id="blindListBody"></span>      
+                            </div>
+                        </div>
+                    </div> <!-- End right col --> 
+
+                </div>
+            </div> <!-- End tournament container --> 
+
+            
+        </div> <!-- En main container -->
+        <footer class="footer">
+          <div class="container max-heiht-30">
+                <div class="text-center">
+                    <p class="text-muted"><a class="link" href="https://github.com/andrkje/PokerTournament" target="_blank"><i class="fa fa-github"></i> GitHub</a></p>
+                </div>
+          </div>
+        </footer>
+         
+        <!-- Scripts -->
+        <script src="js/main.js"></script>
+        <script src="js/jquery1.11.3.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+         
+    </body>
+</html>
